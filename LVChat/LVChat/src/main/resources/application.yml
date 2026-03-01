@@ -1,0 +1,37 @@
+server:
+  port: 8080 # 端口号
+
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 104857600
+      max-request-size: 104857600
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aichat?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowPublicKeyRetrieval=true&allowMultiQueries=true&useServerPrepStmts=false
+    username: root
+    password: 
+  application:
+    name: heima-ai  # 服务名称
+  ai:
+    openai:  # openai配置
+      base-url: https://dashscope.aliyuncs.com/compatible-mode # 阿里百炼 api地址
+      api-key:  # 阿里百炼 api key秘钥
+      chat:
+        options:
+          model: qwen3-max # 阿里百炼模型
+      embedding:
+        options:
+          model: text-embedding-v3 #向量模型
+          dimensions: 1024 #向量维度维度
+logging:
+  level:
+    com.LVChat.ai: debug  # 日志打印级别
+    org.springframework.ai.chat.client.advisor: debug # 日志打印级别
+ai:
+  sensitive-words:
+    - "搞钱"
+    - "凡凡"
+    - "进大厂"
+    - "小可爱"
