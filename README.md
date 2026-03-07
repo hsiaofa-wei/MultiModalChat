@@ -36,24 +36,6 @@ MultiModalChat 是一个个人 AI 工具集合，集成了多种实际落地 AI 
 - 响应式 UI + 深色模式 + 流畅交互
 - 聊天历史持久化 + 实时天气/音乐集成
 
-## 技术栈
-
-### 后端
-- Spring Boot 3.5.9 + Java 17
-- Spring AI（官方集成阿里百炼/通义千问）
-- MyBatis Plus（ORM）
-- MySQL（数据持久化）
-- Hutool / Lombok / Maven
-
-### 前端
-- Vue 3 + TypeScript + Vite
-- Vue Router + Pinia
-- Naive UI（UI 组件）
-- @pdftron/webviewer（PDF 查看/处理）
-- marked + highlight.js（Markdown & 代码高亮）
-- dompurify（HTML 净化）
-- @vueuse/core + Sass
-
 ## 快速启动
 
 ### 后端
